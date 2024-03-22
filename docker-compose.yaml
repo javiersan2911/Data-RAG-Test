@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+
+  mh_rag_agent:
+    build:
+      context: .
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
