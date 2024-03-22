@@ -29,7 +29,7 @@ OPENAI_API_KEY=<<your_api_key>>
 LANGCHAIN_API_KEY=<<your_api_key>>
 LANGCHAIN_ENDPOINT=https://api.smith.langchain.com
 ```
-2. Run the python file [load_data.py](data%2Fload_data.py) to load the data from CSV files into vector store.
+2. Run the python file [load_data.py](data%2Fload_data.py) to load the data from [CSV File](data%2Fcounsel_chat.csv) into vector store.
 3. Start the application with the command
 ```
 docker-compose up --build
