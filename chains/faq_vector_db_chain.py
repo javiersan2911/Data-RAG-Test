@@ -1,5 +1,3 @@
-from operator import itemgetter
-
 from langchain_openai import ChatOpenAI
 from langchain_openai import OpenAIEmbeddings
 from langchain_community.vectorstores.chroma import Chroma
@@ -38,7 +36,7 @@ faqs_retriever = Chroma(
 ).as_retriever(k=10)
 
 faq_chain = (
-        {"context": faqs_retriever, "question": itemgetter("question")}
+        {"context": faqs_retriever, "question": RunnablePassthrough()}
         | faq_prompt_template
         | chat_model
         | StrOutputParser()
